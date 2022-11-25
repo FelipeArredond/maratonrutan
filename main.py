@@ -1,10 +1,13 @@
 import random
 import datetime
 import os
+
 from pathlib import Path
 
 def genData():
-    return random.randint(500000,1000000)
+    # return random.randint(500000,1000000)
+    return random.randint(100,1000)
+    
 
 def genDoc():
     return str(random.randint(1000000000, 9999999999))
@@ -27,7 +30,7 @@ def genGender():
     return random.choice(['Masculino','Femenino'])
 
 def genBen():
-    return random.choice(['Si','No'])
+    return "No"
 
 def genLoc():
     return str(random.randint(1,16))
@@ -45,5 +48,4 @@ if __name__ == '__main__':
     for i in range(0, datos):
         ans = genDoc() + ";" + genDate() + ";" + genGender() + ";" + genBen() + ";" + genBen() + ";" + genBen() + ";" + genLoc() + "\n"
         f.write(ans)
-    f.close()
-
+    f.close()r
